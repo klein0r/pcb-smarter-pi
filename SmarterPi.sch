@@ -228,7 +228,7 @@ L Device:R R1
 U 1 1 601A785D
 P 3150 3950
 F 0 "R1" V 2943 3950 50  0000 C CNN
-F 1 "2k4" V 3034 3950 50  0000 C CNN
+F 1 "2,4kΩ" V 3034 3950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 3950 50  0001 C CNN
 F 3 "~" H 3150 3950 50  0001 C CNN
 	1    3150 3950
@@ -264,29 +264,122 @@ Wire Notes Line
 	3800 3650 2150 3650
 Text Notes 2150 3650 0    50   ~ 0
 Reed connector for gas meter
-$Comp
-L Connector:Screw_Terminal_01x02 J3
-U 1 1 6019DF61
-P 2550 4250
-F 0 "J3" H 2468 3925 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 2468 4016 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2550 4250 50  0001 C CNN
-F 3 "~" H 2550 4250 50  0001 C CNN
-	1    2550 4250
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J4
-U 1 1 6019EE56
-P 2550 4800
-F 0 "J4" H 2468 4475 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 2468 4566 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2550 4800 50  0001 C CNN
-F 3 "~" H 2550 4800 50  0001 C CNN
-	1    2550 4800
-	-1   0    0    1   
-$EndComp
-NoConn ~ 2750 4700
-NoConn ~ 2750 4800
 NoConn ~ 5900 2450
+NoConn ~ 4900 3150
+NoConn ~ 4900 3250
+NoConn ~ 4900 3350
+NoConn ~ 4900 3550
+NoConn ~ 4900 3650
+NoConn ~ 4900 3750
+NoConn ~ 4900 4050
+NoConn ~ 4900 4150
+NoConn ~ 4900 4250
+NoConn ~ 4900 4350
+NoConn ~ 4900 4450
+NoConn ~ 6500 4550
+NoConn ~ 6500 4450
+NoConn ~ 6500 4250
+NoConn ~ 6500 4150
+NoConn ~ 6500 4050
+NoConn ~ 6500 3950
+NoConn ~ 6500 3850
+NoConn ~ 6500 3650
+NoConn ~ 6500 3550
+NoConn ~ 6500 3250
+NoConn ~ 6500 3150
+NoConn ~ 6500 2950
+NoConn ~ 6500 2850
+$Comp
+L Connector:Screw_Terminal_01x04 J3
+U 1 1 601B718F
+P 2550 4150
+F 0 "J3" H 2468 3725 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 2468 3816 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 2550 4150 50  0001 C CNN
+F 3 "~" H 2550 4150 50  0001 C CNN
+	1    2550 4150
+	-1   0    0    1   
+$EndComp
+NoConn ~ 2750 4050
+NoConn ~ 2750 3950
+$Comp
+L Connector:Screw_Terminal_01x03 J4
+U 1 1 601C3076
+P 2550 5250
+F 0 "J4" H 2468 4925 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 2468 5016 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-3-2.54_1x03_P2.54mm_Horizontal" H 2550 5250 50  0001 C CNN
+F 3 "~" H 2550 5250 50  0001 C CNN
+	1    2550 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR09
+U 1 1 601CE628
+P 3350 5650
+F 0 "#PWR09" H 3350 5500 50  0001 C CNN
+F 1 "+3.3V" V 3365 5778 50  0000 L CNN
+F 2 "" H 3350 5650 50  0001 C CNN
+F 3 "" H 3350 5650 50  0001 C CNN
+	1    3350 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 601CFBE1
+P 3350 5150
+F 0 "#PWR010" H 3350 4900 50  0001 C CNN
+F 1 "GND" V 3355 5022 50  0000 R CNN
+F 2 "" H 3350 5150 50  0001 C CNN
+F 3 "" H 3350 5150 50  0001 C CNN
+	1    3350 5150
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6750 3450 2    50   Input ~ 0
+1Wire
+Wire Wire Line
+	6500 3450 6750 3450
+Text GLabel 3350 5250 2    50   Output ~ 0
+1Wire
+Wire Wire Line
+	2750 5150 3350 5150
+Wire Wire Line
+	2750 5250 3000 5250
+Wire Wire Line
+	2750 5350 2850 5350
+Wire Wire Line
+	2850 5350 2850 5650
+Wire Wire Line
+	2850 5650 3000 5650
+$Comp
+L Device:R R2
+U 1 1 601E9674
+P 3000 5450
+F 0 "R2" H 3070 5496 50  0000 L CNN
+F 1 "4,7kΩ" H 3070 5405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 5450 50  0001 C CNN
+F 3 "~" H 3000 5450 50  0001 C CNN
+	1    3000 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5300 3000 5250
+Connection ~ 3000 5250
+Wire Wire Line
+	3000 5250 3350 5250
+Wire Wire Line
+	3000 5600 3000 5650
+Connection ~ 3000 5650
+Wire Wire Line
+	3000 5650 3350 5650
+Wire Notes Line
+	2150 4850 3800 4850
+Wire Notes Line
+	3800 4850 3800 5800
+Wire Notes Line
+	3800 5800 2150 5800
+Wire Notes Line
+	2150 5800 2150 4850
+Text Notes 2150 4850 0    50   ~ 0
+1Wire
 $EndSCHEMATC
