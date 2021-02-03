@@ -90,21 +90,16 @@ Connection ~ 5500 2250
 $Comp
 L power:+3.3V #PWR05
 U 1 1 6019C9EE
-P 5900 2250
-F 0 "#PWR05" H 5900 2100 50  0001 C CNN
-F 1 "+3.3V" H 5915 2423 50  0000 C CNN
-F 2 "" H 5900 2250 50  0001 C CNN
-F 3 "" H 5900 2250 50  0001 C CNN
-	1    5900 2250
+P 5800 2250
+F 0 "#PWR05" H 5800 2100 50  0001 C CNN
+F 1 "+3.3V" H 5815 2423 50  0000 C CNN
+F 2 "" H 5800 2250 50  0001 C CNN
+F 3 "" H 5800 2250 50  0001 C CNN
+	1    5800 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 2250 5900 2450
-Wire Wire Line
 	5800 2450 5800 2250
-Wire Wire Line
-	5800 2250 5900 2250
-Connection ~ 5900 2250
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 6019DD29
@@ -181,20 +176,117 @@ F 3 "" H 3350 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3350 3000 2950 3000
-Text GLabel 3350 2900 2    50   Input ~ 0
-TX
 Wire Wire Line
 	3350 2900 2950 2900
-Text GLabel 3350 2800 2    50   Input ~ 0
-RX
 Wire Wire Line
 	3350 2800 2950 2800
-Text GLabel 4700 2950 0    50   Output ~ 0
+Text GLabel 4700 2950 0    50   Input ~ 0
 RX
 Wire Wire Line
 	4700 2950 4900 2950
-Text GLabel 4700 2850 0    50   Output ~ 0
+Text GLabel 4700 2850 0    50   Input ~ 0
 TX
 Wire Wire Line
 	4700 2850 4900 2850
+Text GLabel 3350 2800 2    50   Output ~ 0
+RX
+Text GLabel 3350 2900 2    50   Output ~ 0
+TX
+Wire Notes Line
+	2150 2350 3800 2350
+Wire Notes Line
+	3800 2350 3800 3200
+Wire Notes Line
+	3800 3200 2150 3200
+Wire Notes Line
+	2150 3200 2150 2350
+Text Notes 2150 2350 0    50   ~ 0
+RJ10 connector for smart meter
+$Comp
+L power:+3.3V #PWR08
+U 1 1 601A05BA
+P 3350 4250
+F 0 "#PWR08" H 3350 4100 50  0001 C CNN
+F 1 "+3.3V" V 3365 4378 50  0000 L CNN
+F 2 "" H 3350 4250 50  0001 C CNN
+F 3 "" H 3350 4250 50  0001 C CNN
+	1    3350 4250
+	0    1    1    0   
+$EndComp
+Text GLabel 3350 4150 2    50   Output ~ 0
+REED
+Wire Wire Line
+	3350 4250 2750 4250
+Wire Wire Line
+	3350 4150 2850 4150
+Text GLabel 4700 3950 0    50   Input ~ 0
+REED
+Wire Wire Line
+	4700 3950 4900 3950
+$Comp
+L Device:R R1
+U 1 1 601A785D
+P 3150 3950
+F 0 "R1" V 2943 3950 50  0000 C CNN
+F 1 "2k4" V 3034 3950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 3950 50  0001 C CNN
+F 3 "~" H 3150 3950 50  0001 C CNN
+	1    3150 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 3950 2850 3950
+Wire Wire Line
+	2850 3950 2850 4150
+Connection ~ 2850 4150
+Wire Wire Line
+	2850 4150 2750 4150
+$Comp
+L power:GND #PWR07
+U 1 1 601AC25B
+P 3350 3950
+F 0 "#PWR07" H 3350 3700 50  0001 C CNN
+F 1 "GND" V 3355 3822 50  0000 R CNN
+F 2 "" H 3350 3950 50  0001 C CNN
+F 3 "" H 3350 3950 50  0001 C CNN
+	1    3350 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 3950 3300 3950
+Wire Notes Line
+	2150 3650 2150 4400
+Wire Notes Line
+	2150 4400 3800 4400
+Wire Notes Line
+	3800 4400 3800 3650
+Wire Notes Line
+	3800 3650 2150 3650
+Text Notes 2150 3650 0    50   ~ 0
+Reed connector for gas meter
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 6019DF61
+P 2550 4250
+F 0 "J3" H 2468 3925 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2468 4016 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2550 4250 50  0001 C CNN
+F 3 "~" H 2550 4250 50  0001 C CNN
+	1    2550 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 6019EE56
+P 2550 4800
+F 0 "J4" H 2468 4475 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2468 4566 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2550 4800 50  0001 C CNN
+F 3 "~" H 2550 4800 50  0001 C CNN
+	1    2550 4800
+	-1   0    0    1   
+$EndComp
+NoConn ~ 2750 4700
+NoConn ~ 2750 4800
+NoConn ~ 5900 2450
 $EndSCHEMATC
