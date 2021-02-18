@@ -17,6 +17,8 @@
 - 1x PHC 1725669 - MPT 0,5/ 3-2,54
 - 1x Resistor DIN0207 2.4k
 - 1x Resistor DIN0207 4.7k
+- 3x Resistor SMD 0805 330
+- 3x LED SMD 0805
 
 ## License
 
