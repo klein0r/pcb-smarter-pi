@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Smarter Pi"
-Date "2021-02-02"
+Date "2021-02-19"
 Rev "0.1"
 Comp "haus-automatisierung.com"
 Comment1 "Matthias Kleine"
@@ -255,8 +255,6 @@ Text Notes 2150 3650 0    50   ~ 0
 Reed connector for gas meter
 NoConn ~ 5900 2450
 NoConn ~ 4900 3150
-NoConn ~ 4900 3250
-NoConn ~ 4900 3350
 NoConn ~ 4900 3550
 NoConn ~ 4900 3650
 NoConn ~ 4900 3750
@@ -264,7 +262,6 @@ NoConn ~ 4900 4050
 NoConn ~ 4900 4150
 NoConn ~ 4900 4250
 NoConn ~ 4900 4350
-NoConn ~ 4900 4450
 NoConn ~ 6500 4450
 NoConn ~ 6500 4250
 NoConn ~ 6500 4150
@@ -465,8 +462,8 @@ $Comp
 L Device:R R1
 U 1 1 601A785D
 P 3150 3950
-F 0 "R1" V 2943 3950 50  0000 C CNN
-F 1 "2,4kΩ" V 3034 3950 50  0000 C CNN
+F 0 "R1" V 2950 3900 50  0000 L CNN
+F 1 "2,4kΩ" V 3050 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 3950 50  0001 C CNN
 F 3 "~" H 3150 3950 50  0001 C CNN
 	1    3150 3950
@@ -517,4 +514,254 @@ Wire Notes Line
 	7350 3150 7350 2500
 Text Notes 7350 2500 0    50   ~ 0
 LEDs
+Text GLabel 4700 3250 0    50   Input ~ 0
+GPIO17
+Text GLabel 4700 3350 0    50   Input ~ 0
+GPIO18
+Text GLabel 4700 4450 0    50   Input ~ 0
+GPIO27
+Wire Wire Line
+	4700 4450 4900 4450
+Wire Wire Line
+	4700 3350 4900 3350
+Wire Wire Line
+	4700 3250 4900 3250
+Text GLabel 9150 4050 2    50   Output ~ 0
+GPIO17
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6030C6F8
+P 8150 4050
+F 0 "SW1" H 8200 3950 50  0000 L CNN
+F 1 "SW_Push" H 7850 3950 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 8150 4250 50  0001 C CNN
+F 3 "~" H 8150 4250 50  0001 C CNN
+	1    8150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 6030E42A
+P 8100 3600
+F 0 "J5" V 8000 3400 50  0000 R CNN
+F 1 "Screw_Terminal_01x02" V 8100 3400 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8100 3600 50  0001 C CNN
+F 3 "~" H 8100 3600 50  0001 C CNN
+	1    8100 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 603133E9
+P 8900 3900
+F 0 "R6" H 8830 3854 50  0000 R CNN
+F 1 "10kΩ" H 8830 3945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8830 3900 50  0001 C CNN
+F 3 "~" H 8900 3900 50  0001 C CNN
+	1    8900 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 4050 7950 3800
+Wire Wire Line
+	7950 3800 8100 3800
+Wire Wire Line
+	8350 4050 8350 3800
+Wire Wire Line
+	8350 3800 8200 3800
+Wire Wire Line
+	8350 4050 8900 4050
+Connection ~ 8350 4050
+Connection ~ 8900 4050
+Wire Wire Line
+	8900 4050 9150 4050
+$Comp
+L power:GND #PWR016
+U 1 1 60332B83
+P 9150 3750
+F 0 "#PWR016" H 9150 3500 50  0001 C CNN
+F 1 "GND" V 9155 3622 50  0000 R CNN
+F 2 "" H 9150 3750 50  0001 C CNN
+F 3 "" H 9150 3750 50  0001 C CNN
+	1    9150 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9150 3750 8900 3750
+$Comp
+L power:+3.3V #PWR013
+U 1 1 60335572
+P 7800 4050
+F 0 "#PWR013" H 7800 3900 50  0001 C CNN
+F 1 "+3.3V" V 7815 4178 50  0000 L CNN
+F 2 "" H 7800 4050 50  0001 C CNN
+F 3 "" H 7800 4050 50  0001 C CNN
+	1    7800 4050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 4050 7950 4050
+Connection ~ 7950 4050
+Text GLabel 9150 4800 2    50   Output ~ 0
+GPIO18
+$Comp
+L Switch:SW_Push SW2
+U 1 1 603494F2
+P 8150 4800
+F 0 "SW2" H 8200 4700 50  0000 L CNN
+F 1 "SW_Push" H 7850 4700 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 8150 5000 50  0001 C CNN
+F 3 "~" H 8150 5000 50  0001 C CNN
+	1    8150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J6
+U 1 1 603494F8
+P 8100 4350
+F 0 "J6" V 8000 4150 50  0000 R CNN
+F 1 "Screw_Terminal_01x02" V 8100 4150 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8100 4350 50  0001 C CNN
+F 3 "~" H 8100 4350 50  0001 C CNN
+	1    8100 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 603494FE
+P 8900 4650
+F 0 "R7" H 8830 4604 50  0000 R CNN
+F 1 "10kΩ" H 8830 4695 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8830 4650 50  0001 C CNN
+F 3 "~" H 8900 4650 50  0001 C CNN
+	1    8900 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 4800 7950 4550
+Wire Wire Line
+	7950 4550 8100 4550
+Wire Wire Line
+	8350 4800 8350 4550
+Wire Wire Line
+	8350 4550 8200 4550
+Wire Wire Line
+	8350 4800 8900 4800
+Connection ~ 8350 4800
+Connection ~ 8900 4800
+Wire Wire Line
+	8900 4800 9150 4800
+$Comp
+L power:GND #PWR017
+U 1 1 6034950C
+P 9150 4500
+F 0 "#PWR017" H 9150 4250 50  0001 C CNN
+F 1 "GND" V 9155 4372 50  0000 R CNN
+F 2 "" H 9150 4500 50  0001 C CNN
+F 3 "" H 9150 4500 50  0001 C CNN
+	1    9150 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9150 4500 8900 4500
+$Comp
+L power:+3.3V #PWR014
+U 1 1 60349513
+P 7800 4800
+F 0 "#PWR014" H 7800 4650 50  0001 C CNN
+F 1 "+3.3V" V 7815 4928 50  0000 L CNN
+F 2 "" H 7800 4800 50  0001 C CNN
+F 3 "" H 7800 4800 50  0001 C CNN
+	1    7800 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 4800 7950 4800
+Connection ~ 7950 4800
+Text GLabel 9150 5550 2    50   Output ~ 0
+GPIO27
+$Comp
+L Switch:SW_Push SW3
+U 1 1 6034E16C
+P 8150 5550
+F 0 "SW3" H 8200 5450 50  0000 L CNN
+F 1 "SW_Push" H 7850 5450 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 8150 5750 50  0001 C CNN
+F 3 "~" H 8150 5750 50  0001 C CNN
+	1    8150 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J7
+U 1 1 6034E172
+P 8100 5100
+F 0 "J7" V 8000 4900 50  0000 R CNN
+F 1 "Screw_Terminal_01x02" V 8100 4900 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8100 5100 50  0001 C CNN
+F 3 "~" H 8100 5100 50  0001 C CNN
+	1    8100 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6034E178
+P 8900 5400
+F 0 "R8" H 8830 5354 50  0000 R CNN
+F 1 "10kΩ" H 8830 5445 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8830 5400 50  0001 C CNN
+F 3 "~" H 8900 5400 50  0001 C CNN
+	1    8900 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 5550 7950 5300
+Wire Wire Line
+	7950 5300 8100 5300
+Wire Wire Line
+	8350 5550 8350 5300
+Wire Wire Line
+	8350 5300 8200 5300
+Wire Wire Line
+	8350 5550 8900 5550
+Connection ~ 8350 5550
+Connection ~ 8900 5550
+Wire Wire Line
+	8900 5550 9150 5550
+$Comp
+L power:GND #PWR018
+U 1 1 6034E186
+P 9150 5250
+F 0 "#PWR018" H 9150 5000 50  0001 C CNN
+F 1 "GND" V 9155 5122 50  0000 R CNN
+F 2 "" H 9150 5250 50  0001 C CNN
+F 3 "" H 9150 5250 50  0001 C CNN
+	1    9150 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9150 5250 8900 5250
+$Comp
+L power:+3.3V #PWR015
+U 1 1 6034E18D
+P 7800 5550
+F 0 "#PWR015" H 7800 5400 50  0001 C CNN
+F 1 "+3.3V" V 7815 5678 50  0000 L CNN
+F 2 "" H 7800 5550 50  0001 C CNN
+F 3 "" H 7800 5550 50  0001 C CNN
+	1    7800 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 5550 7950 5550
+Connection ~ 7950 5550
+Wire Notes Line
+	7350 3450 9650 3450
+Wire Notes Line
+	9650 3450 9650 5750
+Wire Notes Line
+	9650 5750 7350 5750
+Wire Notes Line
+	7350 5750 7350 3450
+Text Notes 7350 3450 0    50   ~ 0
+Buttons
 $EndSCHEMATC
