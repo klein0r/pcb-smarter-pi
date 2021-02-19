@@ -10,10 +10,12 @@
 - Reed sensor Support (GPIO22)
 - RJ11 for serial interface (RX / TX)
 - 3x SMD LED
+- 3x Buttons (SMD or terminal block)
 
 ## Parts
 
-- 1x MPE 094-2-040
+- 1x MEBP4-4
+- 1x MPE 094-2-040 (20x2 connector)
 - 1x PHC 1725672 - MPT 0,5/ 4-2,54
 - 1x PHC 1725669 - MPT 0,5/ 3-2,54
 - 1x Resistor DIN0207 2.4k (R1)
