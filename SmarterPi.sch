@@ -36,16 +36,11 @@ F 3 "" H 5950 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 5050 5300 5200
-Wire Wire Line
-	5300 5200 5400 5200
-Wire Wire Line
 	6000 5050 6000 5200
 Wire Wire Line
 	6000 5200 5900 5200
 Wire Wire Line
 	5400 5050 5400 5200
-Connection ~ 5400 5200
 Wire Wire Line
 	5400 5200 5500 5200
 Wire Wire Line
@@ -764,4 +759,5 @@ Wire Notes Line
 	7350 5750 7350 3450
 Text Notes 7350 3450 0    50   ~ 0
 Buttons
+NoConn ~ 5300 5050
 $EndSCHEMATC

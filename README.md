@@ -8,7 +8,7 @@
 
 - 1-Wire Interface (GPIO4)
 - Reed sensor Support (GPIO22)
-- RJ11 for serial interface (RX / TX)
+- RJ10 for serial interface (RX / TX)
 - 3x SMD LED
 - 3x Buttons (SMD or terminal block)
 
