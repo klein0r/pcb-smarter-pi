@@ -458,7 +458,7 @@ L Device:R R1
 U 1 1 601A785D
 P 3150 3950
 F 0 "R1" V 2950 3900 50  0000 L CNN
-F 1 "2,4kΩ" V 3050 3900 50  0000 L CNN
+F 1 "2,2kΩ" V 3050 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 3950 50  0001 C CNN
 F 3 "~" H 3150 3950 50  0001 C CNN
 	1    3150 3950
@@ -760,4 +760,12 @@ Wire Notes Line
 Text Notes 7350 3450 0    50   ~ 0
 Buttons
 NoConn ~ 5300 5050
+Text Notes 2450 4250 1    50   ~ 0
+G
+Text Notes 2450 4150 1    50   ~ 0
+B
+Text Notes 2450 4050 1    50   ~ 0
+W
+Text Notes 2450 3950 1    50   ~ 0
+Y
 $EndSCHEMATC
