@@ -4,6 +4,8 @@
 
 ![PCB Preview](https://raw.githubusercontent.com/klein0r/pcb-smarter-pi/master/preview.png)
 
+![PCB Photo](https://raw.githubusercontent.com/klein0r/pcb-smarter-pi/master/previewReal.jpg)
+
 ## Features
 
 - 1-Wire Interface (GPIO4)
