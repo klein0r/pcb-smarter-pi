@@ -16,16 +16,16 @@
 
 ## Parts
 
-- 1x MEBP4-4
-- 1x MPE 094-2-040 (20x2 connector)
-- 2x PHC 1725672 - MPT 0,5/ 4-2,54
-- 1x PHC 1725669 - MPT 0,5/ 3-2,54
-- 1x Resistor DIN0207 2.2k (R1)
-- 1x Resistor DIN0207 4.7k (R2)
-- 3x Resistor SMD 0805 330 (R3, R4, R5)
-- 3x Resistor SMD 0805 10k (R6, R7, R8)
-- 3x LED SMD 0805
-- 3x Push Button
+- J1: MPE 094-2-040 (20x2 connector)
+- J2: MEBP4-4
+- J3, J5: PHC 1725672 - MPT 0,5/ 4-2,54
+- J2: PHC 1725669 - MPT 0,5/ 3-2,54
+- R1: Resistor DIN0207 2.2k
+- R2: Resistor DIN0207 4.7k
+- R3, R4, R5: Resistor SMD 0805 330
+- R6, R7, R8: Resistor SMD 0805 10k
+- D1, D2, D3: LED SMD 0805
+- SW1, SW2, SW3: Push Button (3.81)
 
 ## License
 
