@@ -12,13 +12,13 @@
 - Reed sensor Support (GPIO22)
 - RJ10 for serial interface (RX / TX)
 - 3x SMD LED
-- 3x Buttons (SMD or terminal block)
+- 3x Buttons (SMD or external terminal block)
 
 ## Parts
 
 - 1x MEBP4-4
 - 1x MPE 094-2-040 (20x2 connector)
-- 1x PHC 1725672 - MPT 0,5/ 4-2,54
+- 2x PHC 1725672 - MPT 0,5/ 4-2,54
 - 1x PHC 1725669 - MPT 0,5/ 3-2,54
 - 1x Resistor DIN0207 2.2k (R1)
 - 1x Resistor DIN0207 4.7k (R2)
@@ -26,7 +26,6 @@
 - 3x Resistor SMD 0805 10k (R6, R7, R8)
 - 3x LED SMD 0805
 - 3x Push Button
-- 3x Terminal Block 5.08mm
 
 ## License
 
