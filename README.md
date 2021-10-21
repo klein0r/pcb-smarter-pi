@@ -26,6 +26,7 @@
 - R6, R7, R8: Resistor SMD 0805 10k
 - D1, D2, D3: LED SMD 0805
 - SW1, SW2, SW3: Push Button (3.81)
+- U1: DS18B20
 
 ## License
 
