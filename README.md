@@ -21,7 +21,7 @@
 - J1: MPE 094-2-040 (20x2 connector)
 - J2: MEBP4-4
 - J3, J5: PHC 1725672 - MPT 0,5/ 4-2,54
-- J2: PHC 1725669 - MPT 0,5/ 3-2,54
+- J4: PHC 1725669 - MPT 0,5/ 3-2,54
 - R1: Resistor DIN0207 2.2k
 - R2: Resistor DIN0207 4.7k
 - R3, R4, R5: Resistor SMD 0805 330
